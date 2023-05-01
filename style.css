@@ -1,0 +1,37 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+header img {
+    width: 300px;
+    float: left;
+}
+nav {
+    padding-top: 61px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+nav a:hover {
+    color: #111;
+}
+main {
+    width: 90%;
+    margin: 10px auto;
+}
+aside {
+    float: right;
+    width: 20%;
+    border: 1px dotted #d4d4d4;
+    background-color: #eee;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+#links {
+    background-color: #037dbe;
+    padding: 5px 0;
+}
+#mainContentContainer {
+    width: 100%;
+}

@@ -5,19 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet"></link>
 </head>
 <body>
     <header>
-        <a src="index.html">
-            <img src="images/KevinsKnickKnacksLogo_037DBE.png" alt="Kevin's Knick Knacks Logo">
+        <a href="index.html">
+            <img src="images/KevinsKnickKnacksLogo_037DBE.png">
         </a>
         <nav>
             <div id="links">
-                <a src="index.html">HOME</a>
-                <a src="shop.html">SHOP</a>
-                <a src="cart.html">CART</a>
+                <a href="index.html">HOME</a>
+                <a href="shop.html">SHOP</a>
+                <a href="cart.html">CART</a>
             </div>
         </nav>
     </header>
+    <main>
+        <aside>
+            <div id="sideBarHeading">FEATURED ITEMS</div>
+            <div id="sideBarContainer">
+                <a href="shop.html#cardNumber8">
+                    <img class="featuredImage" src="images/shop/thumbnails/BobRoss_Thumb.jpg">
+                    <p class="bold">Bob Ross</p>
+                    <p>$ 18.95</p>
+                </a>
+                <hr>
+                <a href="shop.html#cardNumber7">
+                    <img class="featuredImage" src="images/shop/thumbnails/LawnGnome_Thumb.jpg">
+                    <p class="bold">Lawn Gnome</p>
+                    <p>$ 7.95</p>
+                </a>
+                <hr>
+                <a href="shop.html#cardNumber3">
+                    <img class="featuredImage" src="images/shop/thumbnails/SquishyCaterpillar_Thumb.jpg">
+                    <p class="bold">Squishy Caterpillar</p>
+                    <p>$ 9.99</p>
+                </a>
+            </div>
+        </aside>
+        <div id="mainContentContainer">
+            <img id="mainContentImage" src="images/clownFigurines_1280.jpg">
+        </div>
+    </main>
 </body>
 </html>

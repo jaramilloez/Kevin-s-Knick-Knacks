@@ -46,6 +46,24 @@ footer {
 .bold {
     font-weight: bold;
 }
+.tableRow {
+    display: table-row;
+}
+.tableCell {
+    display: table-cell;
+    padding: 10px 0;
+}
+.tableCell:first-child {
+    font-weight: bold;
+}
+.borderBottom {
+    border-bottom: 1px solid #bbb;
+}
+.removeLink {
+    text-align: right;
+    font-size: 80%;
+    color: #037dbe;
+}
 #links {
     background-color: #037dbe;
     padding: 5px 0;
@@ -63,6 +81,24 @@ footer {
     background-color: #fff;
     border-radius: 5px;
     width: 90%;
+    display: table;
+}
+#cartButtons {
+    text-align: right;
+    padding: 15px 3% 0 0;
+}
+#cartButtons button {
+    background-color: #037dbe;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 2%;
+    cursor: pointer;
+}
+#cartButtons #clearCartButton {
+    background-color: #eee;
+    color: #037dbe;
+    border: 1px solid #037dbe;
 }
 #socialMediaLinks {
     float: left;

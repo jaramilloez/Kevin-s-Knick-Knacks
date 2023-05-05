@@ -97,6 +97,9 @@ footer {
     padding: 5px 0;
 }
 #mainContentContainer {
+    margin-right: 22%;
+}
+#mainContentImage {
     width: 100%;
 }
 #sideBarHeading {

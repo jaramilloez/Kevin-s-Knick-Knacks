@@ -64,6 +64,12 @@ footer {
     font-size: 80%;
     color: #037dbe;
 }
+.removeMargins {
+    margin: 0;
+}
+.textAlignRight {
+    text-align: right;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -91,6 +97,43 @@ footer {
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
+}
+.cartCard {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+.cartCard img {
+    width: 10%;
+    flex: 10%;
+}
+.cartCard:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.cartCardFlex {
+    display: flex;
+}
+.cartTitle {
+    flex-basis: 20%;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.cartDescription {
+    flex-basis: 50%;
+    padding-left: 10px;
+}
+.cartQuantity {
+    flex-basis: 10%;
+}
+.cartQuantity input {
+    margin-top: 17px;
+    width: 50px;
+}
+.cartPrice {
+    flex-basis: 10%;
+    padding-left: 10px;
 }
 #links {
     background-color: #037dbe;

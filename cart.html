@@ -22,11 +22,23 @@
     </header>
     <main>
         <aside>
-            <div id="sideBarHeading">CART</div>
+            <div id="sideBarHeading">ORDER SUMMARY</div>
             <div id="sideBarContainer">
                 <div class="tableRow">
-                    <div class="tableCell">Clown Umbrella</div>
-                    <div class="tableCell">$ 29.99</div>
+                    <div class="tableCell">Subtotal</div>
+                    <div class="tableCell">&dollar; 58.89</div>
+                </div>
+                <div class="tableRow">
+                    <div class="tableCell">Shipping</div>
+                    <div class="tableCell">&dollar; 3.00</div>
+                </div>
+                <div class="tableRow">
+                    <div class="tableCell borderBottom">Sales Tax</div>
+                    <div class="tableCell borderBottom">&dollar; 3.59</div>
+                </div>
+                <div class="tableRow">
+                    <div class="tableCell">Total</div>
+                    <div class="tableCell bold">&dollar; 65.48</div>
                 </div>
             </div>
             <div id="cartButtons">
@@ -35,33 +47,42 @@
             </div>
         </aside>
         <div id="mainContentContainer">
-            <div id="cardContainer">
-                <div class="card" id="cardNumber1">
-                    <img src="images/shop/thumbnails/ClownUmbrella_Thumb.jpg" alt="Image of Clown with Umbrella">
-                    <div class="cardText">
-                        <h4>Clown Umbrella</h4>
-                        <p>A porcelain figurine of a clown holding an umbrella and riding a unicycle</p>
-                        <p>$ 29.95</p>
-                        <button class="cartButton">Add to Cart</button>
+            <div id="cartCardContainer">
+                <div class="cartCard">
+                    <div class="cartCardFlex">
+                        <img src="images/shop/thumbnails/ClownUmbrella_Thumb.jpg" alt="Image of Clown with Umbrella">
+                        <p class="cartTitle">Clown Umbrella</p>
+                        <p class="cartDescription">A porcelain figurine of a clown holding an umbrella and riding a unicycle</p>
+                        <div class="cartQuantity">
+                            <input type="number" value="1" min="1" max="5">
+                        </div>
+                        <p class="cartPrice">&dollar; 29.95</p>
                     </div>
+                    <p class="textAlignRight removeMargins"><a href="#">Remove</a></p>
                 </div>
-                <div class="card" id="cardNumber2">
-                    <img src="images/shop/thumbnails/ElephantFigurines_Thumb.jpg" alt="Image of Elephant Figurines">
-                    <div class="cardText">
-                        <h4>Elephant Figurines</h4>
-                        <p>White elephant ceramic figurines decorated with various fine color</p>
-                        <p>$ 18.95</p>
-                        <button class="cartButton">Add to Cart</button>
+                <div class="cartCard">
+                    <div class="cartCardFlex">
+                        <img src="images/shop/thumbnails/ElephantFigurines_Thumb.jpg" alt="Image of Elephant Figurines">
+                        <p class="cartTitle">Elephant Figurines</p>
+                        <p class="cartDescription">White elephant ceramic figurines decorated with various fine color</p>
+                        <div class="cartQuantity">
+                            <input type="number" value="1" min="1" max="5">
+                        </div>
+                        <p class="cartPrice">&dollar; 18.95</p>
                     </div>
+                    <p class="textAlignRight removeMargins"><a href="#">Remove</a></p>
                 </div>
-                <div class="card" id="cardNumber3">
-                    <img src="images/shop/thumbnails/SquishyCaterpillar_Thumb.jpg" alt="Image of Squishy Caterpillar">
-                    <div class="cardText">
-                        <h4>Squishy Caterpillar</h4>
-                        <p>A squashy, spiky, multi-colored caterpillar</p>
-                        <p>$ 9.99</p>
-                        <button class="cartButton">Add to Cart</button>
+                <div class="cartCard">
+                    <div class="cartCardFlex">
+                        <img src="images/shop/thumbnails/SquishyCaterpillar_Thumb.jpg" alt="Image of Squishy Caterpillar">
+                        <p class="cartTitle">Squishy Caterpillar</p>
+                        <p class="cartDescription">A squashy, spiky, multi-colored caterpillar</p>
+                        <div class="cartQuantity">
+                            <input type="number" value="1" min="1" max="5">
+                        </div>
+                        <p class="cartPrice">&dollar; 9.99</p>
                     </div>
+                    <p class="textAlignRight removeMargins"><a href="#">Remove</a></p>
                 </div>
             </div>
         </div>

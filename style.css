@@ -23,7 +23,7 @@ main {
 aside {
     float: right;
     width: 20%;
-    border: 1px dotted #d4d4d4;
+    border: 1px dotted #4d4d4d;
     background-color: #eee;
     padding-bottom: 15px;
     margin-bottom: 10px;
@@ -116,23 +116,23 @@ footer {
     display: flex;
 }
 .cartTitle {
-    flex-basis: 20%;
+    flex: 20%;
     font-weight: bold;
     padding-left: 10px;
 }
 .cartDescription {
-    flex-basis: 50%;
+    flex: 50%;
     padding-left: 10px;
 }
 .cartQuantity {
-    flex-basis: 10%;
+    flex: 10%;
 }
 .cartQuantity input {
     margin-top: 17px;
     width: 50px;
 }
 .cartPrice {
-    flex-basis: 10%;
+    flex: 10%;
     padding-left: 10px;
 }
 #links {

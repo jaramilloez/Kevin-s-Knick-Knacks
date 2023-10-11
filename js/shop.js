@@ -45,5 +45,11 @@ function displayCart(){
             </div>
         `;
     });
+    removeFromCart();
 }
 displayCart();
+
+let checkoutButton = document.getElementById("checkoutButton");
+checkoutButton.addEventListener("click", function(){
+    window.location.href = 'cart.html';
+},false);

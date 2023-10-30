@@ -1,12 +1,12 @@
-const cardCartContainer = document.querySelector("#cartCartContainer");
+const cartCardContainer = document.querySelector("#cartCardContainer");
 
 function displayCartProducts(){
     clearStorageAndCart();
-    cardCartContainer.innerHTML = "";
+    cartCardContainer.innerHTML = "";
 
     if(cart.length > 0){
         cart.forEach(cartItem => {
-            cardCartContainer.innerHTML += `
+            cartCardContainer.innerHTML += `
                 <div class="cartCard">
                     <div class="cartCardFlex">
                         <img src="${cartItem.image}" alt="${cartItem.description}">
@@ -24,7 +24,7 @@ function displayCartProducts(){
         });
     }
     else{
-        cardCartContainer.innerHTML = '<p id="emptyCart">The cart is empty</p>s';
+        cartCardContainer.innerHTML = '<p id="emptyCart">The cart is empty</p>';
     }
 }
 displayCartProducts();

@@ -1,5 +1,6 @@
 const cardContainer = document.querySelector("#cardContainer");
 
+
 function addProducts(){
     products.forEach(individualCard => {
         cardContainer.innerHTML += `
@@ -17,8 +18,10 @@ function addProducts(){
 }
 addProducts();
 
+
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
+
     for(let i = 0; i < cartButton.length; i++){
         cartButton[i].addEventListener("click", function(){
             let selectedProduct = products.find((product) => product.id == cartButton[i].id);
@@ -30,9 +33,12 @@ function saveToLocalStorage(){
 }
 saveToLocalStorage();
 
+
 function displayCart(){
     clearStorageAndCart();
+
     sideBarContainer.innerHTML = "";
+
     cart.forEach((cartItem) => {
         sideBarContainer.innerHTML += `
             <div class="tableRow">
@@ -45,9 +51,11 @@ function displayCart(){
             </div>
         `;
     });
+
     removeFromCart();
 }
 displayCart();
+
 
 let checkoutButton = document.getElementById("checkoutButton");
 checkoutButton.addEventListener("click", function(){

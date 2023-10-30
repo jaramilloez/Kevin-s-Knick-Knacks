@@ -204,3 +204,7 @@ footer {
     font-style: italic;
     padding-top: 35px;
 }
+#emptyCart {
+    margin: 0;
+    font-style: italic;
+}

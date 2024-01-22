@@ -2,7 +2,7 @@ const cartCardContainer = document.querySelector("#cartCardContainer");
 
 
 function displayCartProducts(){
-    clearStorageAndCart();
+    clearCart();
     cartCardContainer.innerHTML = "";
 
     if(cart.length > 0){
@@ -14,7 +14,7 @@ function displayCartProducts(){
                         <p class="cartTitle">${cartItem.name}</p>
                         <p class="cartDescription">${cartItem.description}</p>
                         <div class="cartQuantity">
-                            <input type="number" value="${cartItem.quantity}" min="1" max="5">
+                            <input class="quantityNumberInput" id="${cartItem.id}" type="number" value="${cartItem.quantity}" min="1" max="5">
                         </div>
                         <p class="cartPrice">&dollar; ${cartItem.price}</p>
                     </div>
@@ -43,7 +43,7 @@ function calculateOrderSummary(){
     tax = 0;
     total = 0;
 
-    clearStorageAndCart();
+    clearCart();
 
     cart.forEach(cartItem => {
         subtotal += cartItem.price;

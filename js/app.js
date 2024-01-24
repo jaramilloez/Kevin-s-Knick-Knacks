@@ -2,8 +2,7 @@ let cart = [];
 const sideBarContainer = document.querySelector("#sideBarContainer");
 
 
-/*Empties the cart array. */
-function clearCart(){
+function initializeCart(){
     cart = [];
     let currentStorage = JSON.parse(localStorage.getItem('CART'));
 
@@ -18,7 +17,7 @@ function removeFromCart(){
 
     for(let i = 0; i < removeLink.length; i++){
         removeLink[i].addEventListener("click", (event) => {
-            clearCart();
+            initializeCart();
             let selectedProduct = cart.find((cartItem) => cartItem.id == event.target.id);
             let itemIndex;
 
@@ -57,6 +56,9 @@ function clearCart(){
     clearCartButton.addEventListener("click", function(){
         cart = [];
         localStorage.clear();
+
+        /*This first if statement only executes on shop.js, and the 2nd if statement only
+            executes on cart.js */
         if(typeof displayCart === "function"){
             displayCart();
         };

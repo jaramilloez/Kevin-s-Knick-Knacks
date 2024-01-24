@@ -20,6 +20,7 @@ function addProducts(){
 addProducts();
 
 
+/*Saves anything added to the cart into the local storage. */
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
 
@@ -45,8 +46,9 @@ function saveToLocalStorage(){
 saveToLocalStorage();
 
 
+/*Displays products in the cart on shop.html. */
 function displayCart(){
-    clearCart();
+    initializeCart();
 
     sideBarContainer.innerHTML = "";
 

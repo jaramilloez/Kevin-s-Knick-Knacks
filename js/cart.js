@@ -1,8 +1,9 @@
 const cartCardContainer = document.querySelector("#cartCardContainer");
 
 
+/*Displays products on cart.html. */
 function displayCartProducts(){
-    clearCart();
+    initializeCart();
     cartCardContainer.innerHTML = "";
 
     if(cart.length > 0){
@@ -43,7 +44,7 @@ function calculateOrderSummary(){
     tax = 0;
     total = 0;
 
-    clearCart();
+    initializeCart();
 
     cart.forEach(cartItem => {
         subtotal += cartItem.price;

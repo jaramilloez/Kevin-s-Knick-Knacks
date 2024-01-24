@@ -43,12 +43,11 @@ function calculateOrderSummary(){
     shipping = 0;
     tax = 0;
     total = 0;
-
     initializeCart();
 
     cart.forEach(cartItem => {
-        subtotal += cartItem.price;
-        shipping++;
+        subtotal += cartItem.price * cartItem.quantity;
+        shipping += cartItem.quantity;
     });
 
     tax = (subtotal + shipping) * 0.061;
@@ -57,6 +56,7 @@ function calculateOrderSummary(){
 
 
 function displayOrderSummary(){
+    updateQuantity();
     calculateOrderSummary();
 
     sideBarContainer.innerHTML = `

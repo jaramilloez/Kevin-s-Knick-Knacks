@@ -23,7 +23,6 @@ addProducts();
 /*Saves anything added to the cart into the local storage. */
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
-
     for(let i = 0; i < cartButton.length; i++){
         cartButton[i].addEventListener("click", function(){
             let selectedProduct = products.find((product) => product.id == cartButton[i].id);
@@ -38,6 +37,7 @@ function saveToLocalStorage(){
                 cart.push(selectedProduct);
             }
             
+            /*Updates the local storage with what's currently in the cart. */
             localStorage.setItem("CART", JSON.stringify(cart));
             displayCart();
         }, false);
@@ -68,6 +68,7 @@ function displayCart(){
     });
 
     removeFromCart();
+    updateQuantity();
 }
 displayCart();
 

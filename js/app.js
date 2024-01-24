@@ -5,7 +5,6 @@ const sideBarContainer = document.querySelector("#sideBarContainer");
 function initializeCart(){
     cart = [];
     let currentStorage = JSON.parse(localStorage.getItem('CART'));
-
     if(currentStorage){
         cart = currentStorage;
     }
@@ -14,7 +13,6 @@ function initializeCart(){
 
 function removeFromCart(){
     let removeLink = document.getElementsByClassName("removeLink");
-
     for(let i = 0; i < removeLink.length; i++){
         removeLink[i].addEventListener("click", (event) => {
             initializeCart();
@@ -30,6 +28,8 @@ function removeFromCart(){
             /*Removes the product that matches the removeLink that was clicked from the cart array,
             then updates the local storage with what's currently in the cart array. */
             cart.splice(itemIndex, 1);
+
+            /*Updates the local storage with what's currently in the cart. */
             localStorage.setItem('CART', JSON.stringify(cart));
             
             /*This first if statement only executes on shop.js, and the 2nd if statement only
@@ -37,7 +37,6 @@ function removeFromCart(){
             if(typeof displayCart === "function"){
                 displayCart();
             };
-
             if(typeof displayCartProducts === "function"){
                 displayCartProducts();
                 displayOrderSummary();
@@ -69,3 +68,26 @@ function clearCart(){
     }, false);
 };
 clearCart();
+
+
+function updateQuantity(){
+    let quantityNumberInput = document.getElementsByClassName("quantityNumberInput");
+    for(let i = 0; i < quantityNumberInput.length; i++){
+        quantityNumberInput[i].addEventListener("change", (event) => {
+            let quantityChanged = quantityNumberInput[i].value;
+            if(quantityChanged > 5){
+                quantityChanged = 5;
+            }
+
+            let itemToChange = cart.find((item) => item.id == event.target.id);
+            itemToChange.quantity = +quantityChanged;
+
+            /*Updates the local storage with what's currently in the cart. */
+            localStorage.setItem('CART', JSON.stringify(cart));
+
+            if(typeof displayOrderSummary === 'function'){
+                displayOrderSummary();
+            }
+        }, false)
+    }
+}

@@ -91,3 +91,13 @@ function updateQuantity(){
         }, false)
     }
 }
+
+
+$(document).ready(function(){
+    let sidebarOrigin = $('main aside').offset();
+
+    $(window).scroll(function(){
+        let scrollPosition = $('html').scrollTop() + 8;
+        $('main aside').toggleClass('sticky', sidebarOrigin.top < scrollPosition);
+    })
+})

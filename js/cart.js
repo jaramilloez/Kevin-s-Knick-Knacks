@@ -1,7 +1,7 @@
 const cartCardContainer = document.querySelector("#cartCardContainer");
 
 
-/*Displays products on cart.html. */
+/*Displays the products from the array in product.js onto the cart page. */
 function displayCartProducts(){
     initializeCart();
     cartCardContainer.innerHTML = "";

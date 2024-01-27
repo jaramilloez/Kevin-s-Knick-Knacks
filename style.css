@@ -107,7 +107,7 @@ aside a {
     position: sticky;
     top: 8px;
 }
-#cartButtons {
+#cartButtons, #paginateButtons button {
     text-align: right;
     padding: 15px 3% 0 0;
 }
@@ -119,10 +119,17 @@ aside a {
     padding: 2%;
     cursor: pointer;
 }
-#cartButtons #clearCartButton {
+#cartButtons #clearCartButton, #paginateButtons button {
     background-color: #eee;
     color: #037dbe;
     border: 1px solid #037dbe;
+}
+#paginateButtons {
+    text-align: right;
+}
+#paginateButtons button {
+    padding: 0.5%;
+    width: 8%;
 }
 .tableRow {
     display: table-row;

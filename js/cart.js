@@ -86,10 +86,7 @@ $(document).ready(function(){
     $('#checkoutButton').click(function(){
         if(subtotal === 0){
             $('#checkoutThankYou').html('The cart is currently empty.');
-            $('#checkoutThankYou').slideDown();
         }
-        else{
-            $('#checkoutThankYou').slideDown();
-        }
+        $('#checkoutThankYou').slideDown();
     })
 })

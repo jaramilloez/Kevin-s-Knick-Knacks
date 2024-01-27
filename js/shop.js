@@ -20,6 +20,12 @@ function addProducts(){
 addProducts();
 
 
+let productsPerPage = 6;
+let currentPage = 1;
+let pagedResults = [];
+let totalProducts = products.length;
+
+
 /*Saves anything added to the cart into the local storage. */
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");

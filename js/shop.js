@@ -1,10 +1,18 @@
 const cardContainer = document.querySelector("#cardContainer");
+let productsPerPage = 6;
+let currentPage = 1;
+let pagedResults = [];
+let totalProducts = products.length;
+let end = currentPage * productsPerPage;
+let start = end - productsPerPage;
 
 
-/*Displays the products from the array in product.js onto the shop page. */
-function addProducts(){
-    products.forEach(individualCard => {
-        cardContainer.innerHTML += `
+function paginate(){
+    pagedResults = products.slice(start, end);
+    $('#cardContainer').empty();
+
+    $.each(pagedResults, function(index, individualCard){
+        $('#cardContainer').append(`
             <div class="card" id="cardNumber${individualCard.id}">
                 <img src="${individualCard.image}" alt="${individualCard.description}">
                 <div class="cardText">
@@ -14,19 +22,47 @@ function addProducts(){
                     <button class="cartButton" id="${individualCard.id}">Add to Cart</button>
                 </div>
             </div>
-        `;
+        `);
     });
+
+    if(currentPage == 1){
+        $('.previous').attr('disabled', true);
+    }
+    else{
+        $('.previous').attr('disabled', false);
+    }
+    
+    if(end >= totalProducts){
+        $('.next').attr('disabled', true);
+    }
+    else{
+        $('.next').attr('disabled', false);
+    }
 }
-addProducts();
+paginate();
 
 
-let productsPerPage = 6;
-let currentPage = 1;
-let pagedResults = [];
-let totalProducts = products.length;
+$('.next').click(function(){
+    if(end < totalProducts){
+        currentPage++;
+    }
+
+    paginate();
+    saveToLocalStorage();
+});
 
 
-/*Saves anything added to the cart into the local storage. */
+$('.previous').click(function(){
+    if(currentPage > 1){
+        currentPage--;
+    }
+
+    paginate();
+    saveToLocalStorage();
+});
+
+
+/*Keeps track of anything added to the cart into the local storage. */
 function saveToLocalStorage(){
     let cartButton = document.getElementsByClassName("cartButton");
     for(let i = 0; i < cartButton.length; i++){

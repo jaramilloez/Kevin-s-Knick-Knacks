@@ -131,6 +131,11 @@ aside a {
     padding: 0.5%;
     width: 8%;
 }
+#paginateButtons button:disabled{
+    border: solid #bbb 1px;
+    color: #bbb;
+    cursor: auto;
+}
 .tableRow {
     display: table-row;
 }

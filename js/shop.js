@@ -3,11 +3,11 @@ let productsPerPage = 6;
 let currentPage = 1;
 let pagedResults = [];
 let totalProducts = products.length;
-let end = currentPage * productsPerPage;
-let start = end - productsPerPage;
 
 
 function paginate(){
+    let end = currentPage * productsPerPage;
+    let start = end - productsPerPage;
     pagedResults = products.slice(start, end);
     $('#cardContainer').empty();
 
@@ -32,7 +32,7 @@ function paginate(){
         $('.previous').attr('disabled', false);
     }
     
-    if(end >= totalProducts){
+    if((currentPage * productsPerPage) >= totalProducts){
         $('.next').attr('disabled', true);
     }
     else{
@@ -43,7 +43,7 @@ paginate();
 
 
 $('.next').click(function(){
-    if(end < totalProducts){
+    if((currentPage * productsPerPage) < totalProducts){
         currentPage++;
     }
 
